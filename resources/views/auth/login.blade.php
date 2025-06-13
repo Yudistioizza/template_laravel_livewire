@@ -48,6 +48,7 @@
             <x-button type="submit" class="ms-4">
                 {{ __('Login SSO') }}
             </x-button>
+            <!-- Login dengan SSO harus dikonfigurasi terlebih dulu sebelum dapat digunakan -->
         </form>
     </x-authentication-card>
 </x-guest-layout>
