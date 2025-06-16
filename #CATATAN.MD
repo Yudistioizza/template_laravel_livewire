@@ -334,3 +334,31 @@ return new class extends Migration
         Schema::dropIfExists('audit_trails');
     }
 };
+
+
+#CATATAN SIDEBAR layout.app
+
+        <div class="min-h-screen bg-gray-100 flex">
+            <!-- Sidebar -->
+            <aside class="w-64 bg-white border-r border-gray-200 min-h-screen">
+                @livewire('navigation-menu')
+            </aside>
+
+            <!-- Main content area -->
+            <div class="flex-1 flex flex-col min-h-screen">
+
+                <!-- Page Heading -->
+                @if (isset($header))
+                    <header class="bg-white shadow">
+                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+                    </header>
+                @endif
+
+                <!-- Page Content -->
+                <main class="flex-1 p-4 overflow-auto">
+                    {{ $slot }}
+                </main>
+            </div>
+        </div>
